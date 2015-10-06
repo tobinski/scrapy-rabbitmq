@@ -15,7 +15,7 @@ def from_settings(settings):
     """ Factory method that returns an instance of channel
     
         :param str connection_type: This field can be `blocking`
-            `asyncore`, `libev`, `select`, `tornado`, or `twisted`
+            `libev`, `select`, `tornado`, or `twisted`
 
         See pika documentation for more details:
             TODO: put pika url regarding connection type
@@ -47,7 +47,6 @@ def from_settings(settings):
 
     connection = {
         'blocking': pika.BlockingConnection,
-        'asyncore': pika.AsyncoreConnection,
         'libev': pika.LibevConnection,
         'select': pika.SelectConnection,
         'tornado': pika.TornadoConnection,
